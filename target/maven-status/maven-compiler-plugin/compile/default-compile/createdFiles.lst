@@ -1,0 +1,3 @@
+com\expensetracker\model\Expense.class
+com\expensetracker\CLI\CLI.class
+com\expensetracker\service\ExpenseService.class
