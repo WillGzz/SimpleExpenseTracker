@@ -25,31 +25,40 @@ public class ExpenseServiceTest {
         service = new ExpenseService();
         expenses = new ArrayList<>();
         expenses.add(new Expense("Food", 10.0, "Pizza", LocalDate.of(2024, 7, 1)));
-        expenses.add(new Expense("Transport", 5.0, "Bus", LocalDate.of(2024, 7, 1)));
+        expenses.add(new Expense("Transport", 6.0, "Bus", LocalDate.of(2024, 7, 1)));
         expenses.add(new Expense("Food", 15.0, "Burger", LocalDate.of(2024, 7, 2)));
         expenses.add(new Expense("Entertainment", 20.0, "Movie", LocalDate.of(2024, 7, 3)));
-        expenses.add(new Expense("Food", 5.0, "Snack", LocalDate.of(2024, 7, 3)));
+        expenses.add(new Expense("Food", 7.0, "Snack", LocalDate.of(2024, 7, 3)));
     }
 
     @Test
     public void testGetTotalExpense() {
         double total = service.getTotalExpense(expenses);
-        assertEquals(55.0, total, 0.001, "Total expense should be 55.0");
+        assertEquals(58.0, total, 0.001, "Total expense should be 58.0");
     }
 
     @Test
     public void testGetTotalExpenseByCategory() {
         Map<String, Double> categoryTotals = service.getTotalExpenseByCategory(expenses);
-        assertEquals(30.0, categoryTotals.get("Food"), 0.001);
-        assertEquals(5.0, categoryTotals.get("Transport"), 0.001);
+        assertEquals(32.0, categoryTotals.get("Food"), 0.001);
+        assertEquals(6.0, categoryTotals.get("Transport"), 0.001);
         assertEquals(20.0, categoryTotals.get("Entertainment"), 0.001);
     }
 
     @Test
     public void testGetExpenseByDate() {
         Map<LocalDate, Double> dateTotals = service.getExpenseByDate(expenses);
-        assertEquals(15.0, dateTotals.get(LocalDate.of(2024, 7, 1)), 0.001);
+        assertEquals(16.0, dateTotals.get(LocalDate.of(2024, 7, 1)), 0.001);
         assertEquals(15.0, dateTotals.get(LocalDate.of(2024, 7, 2)), 0.001);
-        assertEquals(25.0, dateTotals.get(LocalDate.of(2024, 7, 3)), 0.001);
+        assertEquals(27.0, dateTotals.get(LocalDate.of(2024, 7, 3)), 0.001);
     }
+
+    @Test
+    public void testGetHighestAndLowestSpendCategory() {
+        Map<String, String> result = service.getHighestAndLowestSpendCategory(expenses);
+
+        assertEquals("Food", result.get("highest"), "Expected highest spending category to be 'Food'");
+        assertEquals("Transport", result.get("lowest"), "Expected lowest spending category to be 'Transport'");
+    }
+
 }
