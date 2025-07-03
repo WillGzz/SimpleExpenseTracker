@@ -8,7 +8,22 @@ public class Expense {
     private double amount;
     private String item;
     private LocalDate date;
+
+
+    public Expense(){
+        this.category = "";
+        this.amount = 0;
+        this.item = "";
+        this.date = null;
+    }
     
+    public Expense(String category, double amount, String item, LocalDate date) {
+        this.category = category;
+        this.amount = amount;
+        this.item = item;
+        this.date = date;
+    }
+
     public String getCategory() {
         return category;
     }
