@@ -71,4 +71,5 @@ Seed Data can be initialized manually in the CLI by entering example expenses to
 "Transport", 5.00, "Subway", 2022-03-01
 
 ### Powerpoint
--- https://lccuny-my.sharepoint.com/:p:/g/personal/willy_gomez_lc_cuny_edu/EekFxzMG0QFDk812NNlsbSEB8nMMUuv6oGtv2D7t8a1ZOw?e=yOOezv
+[PowerPoint](https://lccuny-my.sharepoint.com/:p:/g/personal/willy_gomez_lc_cuny_edu/EekFxzMG0QFDk812NNlsbSEB8nMMUuv6oGtv2D7t8a1ZOw?e=yOOezv)
+ 
