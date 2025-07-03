@@ -50,7 +50,7 @@ git clone https://github.com/your-username/SimpleExpenseTrackerApp.git
 cd SimpleExpenseTrackerApp
 mvn compile
 ```
-Run directly from VS Code by pressing the Run button on ExpenseTrackerCLI.java.
+Run directly from VS Code by pressing the Run button above the main method on ExpenseTrackerCLI.java.
 
  ### Run Unit Tests:
 
